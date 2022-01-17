@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Interfaces: Int {
+public enum Interfaces: Int {
     case fw400 = 400_000_000
     case usb2  = 480_000_000
     case fw800 = 800_000_000
