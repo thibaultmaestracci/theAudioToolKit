@@ -27,7 +27,7 @@ public struct MultiTrack {
         return sampleRate.value * bitDepth.value * time * 60
     }
 
-    init(_ sampleRate: SampleRates = .sr441, _ bitDepth: BitDepths = .bd16, _ tracks: Int = 1, _ time: Int = 1) {
+    public init(_ sampleRate: SampleRates = .sr441, _ bitDepth: BitDepths = .bd16, _ tracks: Int = 1, _ time: Int = 1) {
         self.sampleRate = sampleRate
         self.bitDepth = bitDepth
         self.tracks = tracks
