@@ -12,10 +12,10 @@ public enum DistanceUnit: Int {
     case centimetre = 1
     case metre =  2
 
-    static var count: Int { return 3 }
-    static var dft: Int { 1 }
+    public static var count: Int { return 3 }
+    public static var dft: Int { 1 }
 
-    var description: String {
+    public var description: String {
         switch self {
         case .millimetre: return "mm"
         case .centimetre: return "cm"
@@ -23,7 +23,7 @@ public enum DistanceUnit: Int {
         }
     }
 
-    var multiplierValue: Double {
+    public var multiplierValue: Double {
         switch self {
         case .millimetre: return 1
         case .centimetre: return 10
@@ -39,21 +39,21 @@ public enum Decimal {
 }
 
 public class Distance: Equatable {
-    static func == (lhs: Distance, rhs: Distance) -> Bool {
+    public static func == (lhs: Distance, rhs: Distance) -> Bool {
         return (lhs.data == rhs.data) && (lhs.unit == rhs.unit) && (lhs.decimal == rhs.decimal)
     }
 
-    var data: Double
-    var unit: DistanceUnit
-    var decimal: Decimal
+    public var data: Double
+    public var unit: DistanceUnit
+    public var decimal: Decimal
 
-    init(data: Double, unit: DistanceUnit, decimal: Decimal = .two) {
+    public init(data: Double, unit: DistanceUnit, decimal: Decimal = .two) {
         self.data = data
         self.unit = unit
         self.decimal = decimal
     }
 
-    var strData: String {
+    public var strData: String {
         if decimal == Decimal.zero {
             return String(Int(data))
         } else {
@@ -61,7 +61,7 @@ public class Distance: Equatable {
         }
     }
 
-    var strUnit: String {
+    public var strUnit: String {
         return String(unit.description)
     }
 

@@ -14,13 +14,13 @@ public struct InfoResult {
 
 public struct InfoData {
 
-    enum Format {
+    public enum Format {
         case bitRate
         case octet
         case byte
     }
 
-    enum Mode: Int {
+    public enum Mode: Int {
         case basic = 1000
         case info = 1024
     }
@@ -29,7 +29,7 @@ public struct InfoData {
     private let octet = [" o", " ko", " Mo", " Go", " To"]
     private let byte = [" B", " kB", " MB", " GB", " TB"]
 
-    func getInfoResult(dataInBit: Int, format: Format, mode: Mode) -> InfoResult {
+    public func getInfoResult(dataInBit: Int, format: Format, mode: Mode) -> InfoResult {
 
         var data = Double()
         if format != .bitRate {

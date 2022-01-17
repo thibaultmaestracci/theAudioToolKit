@@ -15,7 +15,7 @@ public struct BasicNote {
     public var octave: Octave
     private var tuning: TuningFrequencyForA4
 
-    init(rootNote: RootNote, octave: Octave, tuning: TuningFrequencyForA4) {
+    public init(rootNote: RootNote, octave: Octave, tuning: TuningFrequencyForA4) {
         self.rootNote = rootNote
         self.octave = octave
         self.tuning = tuning
@@ -38,7 +38,7 @@ public struct BasicNote {
         }
     }
 
-    enum RootNote: Int, CaseIterable {
+    public enum RootNote: Int, CaseIterable {
         case cFlat  = 1
         case cSharp = 2
         case dFlat  = 3
@@ -53,7 +53,7 @@ public struct BasicNote {
         case bFlat  = 12
     }
 
-    enum Octave: Int, CaseIterable {
+    public enum Octave: Int, CaseIterable {
         case oct0 = 0
         case oct1 = 1
         case oct2 = 2
@@ -67,7 +67,7 @@ public struct BasicNote {
         case oct10 = 10
     }
 
-    enum TuningFrequencyForA4: Float {
+    public enum TuningFrequencyForA4: Float {
         case hz438 = 438.00
         case hz440 = 440.00
         case hz442 = 442.00
@@ -78,7 +78,7 @@ public struct BasicNote {
         }
     }
 
-    var frequencyHz: Int {
+    public var frequencyHz: Int {
         let octaveDelta = tuning.octaveRef.rawValue - self.octave.rawValue
         let interval = -(RootNote.aFlat.rawValue - self.rootNote.rawValue) - octaveDelta*12
         let powww = pow(self.ratio, Float(interval))
@@ -92,7 +92,7 @@ public class BasicRootNotes {
 
     public var rootNotes = [BasicNote]()
 
-    init(tuning: BasicNote.TuningFrequencyForA4) {
+    public init(tuning: BasicNote.TuningFrequencyForA4) {
         for octave in BasicNote.Octave.allCases {
             for note in BasicNote.RootNote.allCases {
                 let newNote = BasicNote(rootNote: note, octave: octave, tuning: tuning)

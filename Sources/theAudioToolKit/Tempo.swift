@@ -37,7 +37,7 @@ public class Tempo {
 
     // MARK: - Public
 
-    enum CalcMode: Int {
+    public enum CalcMode: Int {
         // Max number of values used for calc
         case average = 21
         case instant = 4

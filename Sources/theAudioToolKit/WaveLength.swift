@@ -9,7 +9,7 @@ import Foundation
 
 public struct WaveLengthData {
 
-    static var freqValues = [20, 25, 31, 35,
+    public static var freqValues = [20, 25, 31, 35,
                     40, 50, 63, 70,
                     80, 100, 125, 140,
                     160, 200, 250, 280,
@@ -20,7 +20,7 @@ public struct WaveLengthData {
                     4200, 5000, 6000, 7000,
                     8000, 9000, 10000, 12000, 14000, 16000, 18000, 20000]
 
-    static var freqText = ["20 Hz", "25 Hz", "31 Hz", "35 Hz",
+    public static var freqText = ["20 Hz", "25 Hz", "31 Hz", "35 Hz",
                     "40 Hz", "50 Hz", "63 Hz", "70 Hz",
                     "80 Hz", "100 Hz", "125 Hz", "140 Hz",
                     "160 Hz", "200 Hz", "250 Hz", "280 Hz",
@@ -36,16 +36,16 @@ public struct WaveLengthData {
 
 public struct WaveLengthCalc {
 
-    var freqHz: Int
-    var soundspeed: SoundSpeeds
+    public var freqHz: Int
+    public var soundspeed: SoundSpeeds
 
-    enum WaveLengthFactor: Double {
+    public enum WaveLengthFactor: Double {
         case fullWave = 1.0
         case halfWave = 2.0
         case quarWave = 4.0
     }
 
-    func getDistance(for factor: WaveLengthFactor, unit: DistanceUnit) -> Distance {
+    public func getDistance(for factor: WaveLengthFactor, unit: DistanceUnit) -> Distance {
         var calcData = ( Double(soundspeed.value) / Double(freqHz) * 1000)
         let calcUnit = DistanceUnit.millimetre
         calcData /= factor.rawValue

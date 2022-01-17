@@ -9,11 +9,11 @@ import Foundation
 
 public struct Delay {
 
-    var distance: Distance
-    var soundspeed: SoundSpeeds
+    public var distance: Distance
+    public var soundspeed: SoundSpeeds
 
     // Delay in ms rounded to 2 digit
-    var delayMs: Double {
+    public var delayMs: Double {
         let distanceM = distance
         distanceM.convert(to: .millimetre, rounded: .one)
         let calcDelay = distanceM.data / Double(soundspeed.value)

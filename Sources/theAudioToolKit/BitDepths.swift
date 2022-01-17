@@ -12,9 +12,9 @@ public enum BitDepths: Int, CaseIterable {
     case bd24
     case bd32
 
-    static var defaultIndexValue: Int { 0 }
+    public static var defaultIndexValue: Int { 0 }
 
-    var value: Int {
+    public var value: Int {
         switch self {
         case .bd16: return 16
         case .bd24: return 24
@@ -22,7 +22,7 @@ public enum BitDepths: Int, CaseIterable {
         }
     }
 
-    var name: String {
+    public var name: String {
         switch self {
         case .bd16: return "16"
         case .bd24: return "24"
