@@ -7,16 +7,16 @@
 
 import Foundation
 
-enum SoundSpeeds: Int, CaseIterable {
+public enum SoundSpeeds: Int, CaseIterable {
     case ss00c = 0
     case ss10c
     case ss15c
     case ss20c
     case ss30c
 
-    static var defaultIndexValue: Int { 2 }
+    public static var defaultIndexValue: Int { 2 }
 
-    var value: Int {
+    public var value: Int {
         switch self {
         case .ss00c: return 331
         case .ss10c: return 337
@@ -26,7 +26,7 @@ enum SoundSpeeds: Int, CaseIterable {
         }
     }
 
-    var name: String {
+    public var name: String {
         switch self {
         case .ss00c: return "0°c"
         case .ss10c: return "10°c"
