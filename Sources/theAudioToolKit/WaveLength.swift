@@ -32,6 +32,10 @@ public struct WaveLengthData {
                     "8 kHz", "9 kHz", "10 kHz", "12 kHz", "14 kHz", "16 kHz", "18 kHz", "20 kHz"]
 
     var freqDftSelected = 12
+    
+    public init() {
+        
+    }
 }
 
 public struct WaveLengthCalc {
@@ -43,6 +47,11 @@ public struct WaveLengthCalc {
         case fullWave = 1.0
         case halfWave = 2.0
         case quarWave = 4.0
+    }
+    
+    public init(freqHz: Int, soundspeed: SoundSpeeds) {
+        self.freqHz = freqHz
+        self.soundspeed = soundspeed
     }
 
     public func getDistance(for factor: WaveLengthFactor, unit: DistanceUnit) -> Distance {

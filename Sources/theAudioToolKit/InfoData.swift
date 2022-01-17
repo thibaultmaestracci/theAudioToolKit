@@ -8,8 +8,8 @@
 import Foundation
 
 public struct InfoResult {
-    var value: String
-    var unit: String
+    public var value: String
+    public var unit: String
 }
 
 public struct InfoData {

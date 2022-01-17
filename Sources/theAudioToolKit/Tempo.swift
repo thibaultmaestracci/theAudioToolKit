@@ -36,6 +36,10 @@ public class Tempo {
     }
 
     // MARK: - Public
+    
+    public init() {
+        
+    }
 
     public enum CalcMode: Int {
         // Max number of values used for calc
