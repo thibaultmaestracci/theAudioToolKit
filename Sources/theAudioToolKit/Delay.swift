@@ -11,7 +11,12 @@ public struct Delay {
 
     public var distance: Distance
     public var soundspeed: SoundSpeeds
-   
+    
+    public init(distance: Distance, soundspeed: SoundSpeeds) {
+        self.distance = distance
+        self.soundspeed = soundspeed
+    }
+    
     // Delay in ms rounded to 2 digit
     public var delayMs: Double {
         let distanceM = distance

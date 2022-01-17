@@ -9,7 +9,7 @@ import Foundation
 
 public struct WaveLengthData {
 
-    public static var freqValues = [20, 25, 31, 35,
+    public var freqValues = [20, 25, 31, 35,
                     40, 50, 63, 70,
                     80, 100, 125, 140,
                     160, 200, 250, 280,
@@ -20,7 +20,7 @@ public struct WaveLengthData {
                     4200, 5000, 6000, 7000,
                     8000, 9000, 10000, 12000, 14000, 16000, 18000, 20000]
 
-    public static var freqText = ["20 Hz", "25 Hz", "31 Hz", "35 Hz",
+    public var freqText = ["20 Hz", "25 Hz", "31 Hz", "35 Hz",
                     "40 Hz", "50 Hz", "63 Hz", "70 Hz",
                     "80 Hz", "100 Hz", "125 Hz", "140 Hz",
                     "160 Hz", "200 Hz", "250 Hz", "280 Hz",
@@ -31,7 +31,7 @@ public struct WaveLengthData {
                     "4.2 kHz", "5 kHz", "6 kHz", "7 kHz",
                     "8 kHz", "9 kHz", "10 kHz", "12 kHz", "14 kHz", "16 kHz", "18 kHz", "20 kHz"]
 
-    var freqDftSelected = 12
+    public var freqDftSelected = 12
     
     public init() {
         
