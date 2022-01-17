@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MultiTrack {
+public struct MultiTrack {
     // MARK: - Private
 
     private var sampleRate: SampleRates

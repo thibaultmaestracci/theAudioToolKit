@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum SampleRates: Int, CaseIterable {
+public enum SampleRates: Int, CaseIterable {
     case sr441 = 0
     case sr480
     case sr960

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum DistanceUnit: Int {
+public enum DistanceUnit: Int {
     case millimetre = 0
     case centimetre = 1
     case metre =  2
@@ -32,13 +32,13 @@ enum DistanceUnit: Int {
     }
 }
 
-enum Decimal {
+public enum Decimal {
     case zero
     case one
     case two
 }
 
-class Distance: Equatable {
+public class Distance: Equatable {
     static func == (lhs: Distance, rhs: Distance) -> Bool {
         return (lhs.data == rhs.data) && (lhs.unit == rhs.unit) && (lhs.decimal == rhs.decimal)
     }

@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct InfoResult {
+public struct InfoResult {
     var value: String
     var unit: String
 }
 
-struct InfoData {
+public struct InfoData {
 
     enum Format {
         case bitRate

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Tempo {
+public class Tempo {
     // MARK: - Private
     private var mode = CalcMode.average
 

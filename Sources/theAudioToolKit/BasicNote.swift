@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct BasicNote {
+public struct BasicNote {
 
     private let ratio: Float = 1.059463
 
@@ -88,7 +88,7 @@ struct BasicNote {
 
 }
 
-class BasicRootNotes {
+public class BasicRootNotes {
 
     public var rootNotes = [BasicNote]()
 

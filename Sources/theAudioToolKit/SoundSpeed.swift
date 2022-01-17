@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum SoundSpeeds: Int, CaseIterable {
+public enum SoundSpeeds: Int, CaseIterable {
     case ss00c = 0
     case ss10c
     case ss15c

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Delay {
+public struct Delay {
 
     var distance: Distance
     var soundspeed: SoundSpeeds

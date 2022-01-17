@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct WaveLengthData {
+public struct WaveLengthData {
 
     static var freqValues = [20, 25, 31, 35,
                     40, 50, 63, 70,
@@ -34,7 +34,7 @@ struct WaveLengthData {
     var freqDftSelected = 12
 }
 
-struct WaveLengthCalc {
+public struct WaveLengthCalc {
 
     var freqHz: Int
     var soundspeed: SoundSpeeds
