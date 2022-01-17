@@ -14,9 +14,9 @@ public enum SampleRates: Int, CaseIterable {
     case sr192
     case sr384
 
-    static var defaultIndexValue: Int { 0 }
+    public static var defaultIndexValue: Int { 0 }
 
-    var value: Int {
+    public var value: Int {
         switch self {
         case .sr441: return 44_100
         case .sr480: return 48_000
@@ -26,7 +26,7 @@ public enum SampleRates: Int, CaseIterable {
         }
     }
 
-    var name: String {
+    public var name: String {
         switch self {
         case .sr441: return "44.1"
         case .sr480: return "48"
